@@ -1,0 +1,77 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #42C2FF;
+$background-color: #EFFFFD;
+
+@mixin button($padding:10px 20px, $font-size:16px, $border-radius:3px, $bg-color:#ccc, $font-color:#333) {
+    padding:$padding;
+    display:inline-block;
+    border-radius:$border-radius;
+    background:$bg-color;
+    font-size:$font-size;
+    color:$font-color;
+}
+
+@mixin image ($padding: 50px, $border-radius:3px, $width:50%){
+    padding:$padding;
+    border-radius:$border-radius;
+    width:$width;
+}
+body{
+    font: 100% $font-stack;
+    color: $primary-color;
+    background-color: $background-color;
+    margin: 0;
+}
+
+nav{
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li{
+        display: inline-block;
+    }
+
+    a{
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+    }
+}
+
+
+.btn {
+	@include button;
+}
+
+.btn-large {
+	@include button(20px 30px, 22px);
+}
+
+.image{
+    @include image;
+}
+
+.head{
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #85F4FF;
+}
+footer ul{
+    position: relative;
+    text-align: center;
+    list-style: none;
+}
+
+footer {
+    background-color: #B8FFF9;
+    margin: 0;
+    padding: 0%;
+    padding-top: 0%;
+}
+
+footer a{
+    color: $primary-color;
+}
